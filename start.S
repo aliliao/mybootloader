@@ -14,6 +14,9 @@ _start:
 	/* ## 2. 关看门狗 */
 	bl disable_watchdog
 
+	/* ## 3. 提升系统时钟性能 */
+	bl clock_init
+
 	/* ## 3. LED blink */
 	bl led_loop
 

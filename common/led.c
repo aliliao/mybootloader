@@ -1,5 +1,7 @@
 
 #include "s3c2440.h"
+
+#include "delay.h"
 #include "led.h"
 
 /* @led  - LED1, LED2,4,8
@@ -29,12 +31,19 @@ void led_loop(void)
 	led_cfg_as_output(LED2);
 	led_cfg_as_output(LED4);
 
-	led_set(LED1, on);
-	led_set(LED2, off);
-	led_set(LED4, on);
+	while (1) {
+		led_set(LED1, on);
+		led_set(LED2, off);
+		led_set(LED4, on);
 
-	while (1)
-		;
+		delay(10000);
+
+		led_set(LED1, off);
+		led_set(LED2, on);
+		led_set(LED4, off);
+
+		delay(10000);
+	}
 }
 
 
