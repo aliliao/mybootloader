@@ -31,7 +31,7 @@ void led_cfg_as_output(enum led_no led);
 /* @led  - LED1, LED2,4,8
  * @stat - 0 OR 1
  */
-int led_set(enum led_no led, enum led_stat stat);
+void led_set(enum led_no led, enum led_stat stat);
 
 
 

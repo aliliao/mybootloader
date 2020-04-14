@@ -53,4 +53,7 @@ dkms.conf
 
 # Source Insight Project Folder
 si/
+*.bin
+*.dis
+data
 

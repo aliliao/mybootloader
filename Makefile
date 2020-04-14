@@ -24,13 +24,15 @@ export CFLAGS LDFLAGS
 TOPDIR := $(shell pwd)
 export TOPDIR
 
-TARGET := uart
+TARGET := data
 
 ## ==== Top dir files ====
 obj-y += start.o
+obj-y += init.o
+
 
 ## ==== Sub folder ====
-obj-y += led/
+obj-y += common/
 
 
 all : start_recursive_build $(TARGET)
@@ -54,5 +56,5 @@ clean:
 distclean:
 	rm -f $(shell find -name "*.o")
 	rm -f $(shell find -name "*.d")
-	rm -f $(TARGET)
+	rm -f $(TARGET) $(TARGET).elf $(TARGET).bin $(TARGET).dis
 	
