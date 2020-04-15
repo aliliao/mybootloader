@@ -36,13 +36,13 @@ void led_loop(void)
 		led_set(LED2, off);
 		led_set(LED4, on);
 
-		delay(10000);
+		delay(50000);
 
 		led_set(LED1, off);
 		led_set(LED2, on);
 		led_set(LED4, off);
 
-		delay(10000);
+		delay(50000);
 	}
 }
 
